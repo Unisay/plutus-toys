@@ -41,9 +41,13 @@ common project-config
 
 library
   import:           base, project-config
-  exposed-modules:
-    AuctionValidator
-    AuctionValidatorBlueprint
+  exposed-modules:  AuctionValidator
+
+  ---------------------
+  -- TODO, on hold pending this plutus PR:
+  -- https://github.com/IntersectMBO/plutus/pull/6165
+  ---------------------
+  -- AuctionValidatorBlueprint
 
   -- other-modules:
   -- other-extensions:
@@ -64,7 +68,11 @@ library
 executable blueprint
   import:           base, project-config
   main-is:          Main.hs
-  build-depends:    blueprint
+  build-depends:
+    , blueprint
+    , devnet
+    , mtl
+
   hs-source-dirs:   app
   default-language: Haskell2010
 

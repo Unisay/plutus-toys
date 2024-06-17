@@ -1,0 +1,80 @@
+cabal-version: 3.0
+name:          devnet
+version:       0.1.0.0
+synopsis:      Devnet for integration tests
+license:       Apache-2.0
+license-files: LICENSE
+maintainer:
+author:
+homepage:
+bug-reports:
+description:
+build-type:    Simple
+
+common lang
+  default-language:   Haskell2010
+  default-extensions:
+    DeriveFoldable
+    DeriveFunctor
+    DeriveGeneric
+    DeriveLift
+    DeriveTraversable
+    ExplicitForAll
+    FlexibleContexts
+    GeneralizedNewtypeDeriving
+    ImportQualifiedPost
+    MultiParamTypeClasses
+    NumericUnderscores
+    ScopedTypeVariables
+    StandaloneDeriving
+
+  ghc-options:
+    -Wall -Wnoncanonical-monad-instances -Wunused-packages
+    -Wincomplete-uni-patterns -Wincomplete-record-updates
+    -Wredundant-constraints -Widentities
+
+library
+  import:          lang
+  exposed-modules:
+    Devnet.CardanoNode
+    Devnet.CardanoNode.Types
+    Devnet.Logging
+
+  hs-source-dirs:  lib
+  build-depends:
+    , aeson
+    , async
+    , base
+    , bytestring
+    , cardano-api
+    , cardano-crypto-wrapper
+    , cardano-ledger-byron
+    , cardano-ledger-core
+    , cardano-ledger-shelley
+    , cardano-slotting
+    , containers
+    , contra-tracer
+    , directory
+    , exceptions
+    , filepath
+    , http-client
+    , HUnit
+    , io-classes
+    , iohk-monitoring
+    , lens
+    , mtl
+    , ouroboros-consensus
+    , ouroboros-consensus-cardano
+    , ouroboros-network-protocols
+    , prettyprinter
+    , process
+    , servant-client
+    , servant-client-core
+    , si-timers
+    , stm
+    , strict-sop-core
+    , temporary
+    , text
+    , time
+    , transformers
+    , unix
