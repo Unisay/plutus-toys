@@ -5,6 +5,13 @@
 {-# LANGUAGE TypeApplications #-}
 {-# OPTIONS_GHC -freduction-depth=0 #-}
 -}
+----------------------------------
+--- TODO ---
+-- this module is taken out of blueprint.cabal and is not part of the build
+-- Once PR, https://github.com/IntersectMBO/plutus/pull/6165
+-- is merged, we can add this to the build.
+-- The PR addresses the stack-overflow
+-----------------------------------
 module AuctionValidatorBlueprint (
   writeBlueprintToFile,
 )

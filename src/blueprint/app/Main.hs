@@ -15,8 +15,8 @@ main :: IO ()
 main = do
   runExceptT
     ( loadConnectInfo
-        "/home/kayvan/dev/workspaces/workspace-schwarzer-swan/haskell/plutus-toys/var/8.93/preview/node-config/config.json"
-        "/home/kayvan/dev/workspaces/workspace-schwarzer-swan/haskell/plutus-toys/var/8.93/preview/cardano-node-preview.socket"
+        "/home/kayvan/dev/workspaces/workspace-schwarzer-swan/haskell/plutus-toys/cardano-configuration/network/sanchonet/cardano-node/config.json"
+        "/home/kayvan/dev/workspaces/workspace-schwarzer-swan/haskell/plutus-toys/var/8.11.0-sancho/sancho/cardano-node-preview.socket"
     )
     >>= \case
       Left e -> print e
