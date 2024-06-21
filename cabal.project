@@ -15,6 +15,7 @@ index-state: 2024-06-17T12:16:29Z
 
 packages:
          ./src/blueprint
+         ./src/core
          ./src/devnet
 
 -- You never, ever, want this.
